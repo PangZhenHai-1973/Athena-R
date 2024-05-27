@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <RootNamespace>Athena_R</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+    <NoWin32Manifest>true</NoWin32Manifest>
+    <Copyright>Copyright © 海子(庞振海) 2010-2022</Copyright>
+    <Version>1.2.6.1</Version>
+    <Company>海子(庞振海)</Company>
+    <Authors></Authors>
+    <ApplicationIcon>256.ico</ApplicationIcon>
+    <StartupObject>Athena_R.Program</StartupObject>
+    <IsPublishable>False</IsPublishable>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <Platforms>x64</Platforms>
+    <Configurations>Release</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <RuntimeHostConfigurationOption Include="System.Globalization.UseNls" Value="true" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Include="..\Athena-R\**\*.cs" />
+    <EmbeddedResource Include="..\Athena-R\**\*.resx" />
+  </ItemGroup>
+
+</Project>
